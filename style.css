@@ -64,6 +64,9 @@ h1 {
 .plan {
   display: flex;
 }
+.plan img {
+  object-fit: cover;
+}
 h3 {
   margin-top: 10px;
   line-height: 1.5;
