@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Red Hat Display';
+  /* border: 2px solid green; */
+}
+
+:root {
+  --Primary-Pale-blue: hsl(225, 100%, 94%);
+  --Primary-Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  background: var(--Primary-Pale-blue);
+  background-size: cover;
+}
+.container {
+  background: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0;
+}
+.content {
+  text-align: center;
+}
+.content img:nth-child(1) {
+  border-radius: 20px 20px 0 0;
+  width: 31%;
+  max-width: 400px;
+}
+.order-summary {
+  display: flex;
+  width: 31%;
+  max-width: 400px;
+  margin: -5px auto;
+  padding: 40px;
+  gap: 30px;
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+  flex-direction: column;
+  box-shadow: 0px 10px 50px hsla(224, 23%, 55%, .4);
+}
+h1 {
+  color: var(--Dark-blue);
+  font-weight: bolder;
+}
+.annual-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: var(--Very-pale-blue);
+  padding: 20px 20px;
+  font-size: .9rem;
+  border-radius: 10px;
+}
+.plan {
+  display: flex;
+}
+h3 {
+  margin-top: 10px;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+h3 span {
+  color: var(--Desaturated-blue);
+  font-weight: 700;
+}
+
+button {
+  padding: 20px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  background: var(--Primary-Bright-blue);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0px 10px 50px hsla(224, 23%, 55%, .9);
+  transition: background-color .125s;
+  cursor: pointer;
+}
+button:active {
+  background-color:  hsl(245, 93%, 16%);
+}
+h5 {
+  font-size: 18px;
+  font-family:  var(--Desaturated-blue);
+  font-weight: bolder;
+}
+
+@media (max-width: 950px) {
+  .content img:nth-child(1) {
+    width: 100%;
+    max-width: 347px;
+  }
+  .order-summary {
+    width: 100%;
+    max-width: 347px;
+    padding: 20px 20px;
+  }
+  .order-summary p {
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--Desaturated-blue);
+  }
+  .annual-plan {
+    gap: 40px;
+  }
+  .plan{
+    gap: 20px;
+  }
+}
